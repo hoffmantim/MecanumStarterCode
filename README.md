@@ -10,7 +10,6 @@ There is a 15% deadzone built into the code to account for stick drift. This can
 float forwardVal = abs(Controller1.Axis3.position(percent)) > 15 ? Controller1.Axis3.position(percent) : 0;
 float sidewaysVal = abs(Controller1.Axis4.position(percent)) > 15 ? Controller1.Axis4.position(percent) : 0;
 float turnVal = abs(Controller1.Axis1.position(percent)) > 15 ? Controller1.Axis1.position(percent) : 0;
-
 ```
 
 Simply change the "15" in each line to a value that corresponds to the amount of drift in your controllers. Start with smaller numbers and slowly increase them until the drift is gone or minimized.
