@@ -94,10 +94,10 @@ void usercontrol(void) {
     Brain.Screen.printAt(10,150,  "forwardVal: %.2f   ", forwardVal);
     Brain.Screen.printAt(10,170,  "sidewaysVal: %.2f   ", sidewaysVal);
 
-    FrontRight.spin(forward, (forwardVal - sidewaysVal + turnVal) * .12, voltageUnits::volt);
-    FrontLeft.spin(forward,  (forwardVal + sidewaysVal - turnVal) * .12, voltageUnits::volt);
-    RearRight.spin(forward,  (forwardVal + sidewaysVal + turnVal) * .12, voltageUnits::volt);
-    RearLeft.spin(forward,   (forwardVal - sidewaysVal - turnVal) * .12, voltageUnits::volt);
+    FrontRight.spin(forward, (forwardVal - sidewaysVal - turnVal) * .12, voltageUnits::volt);
+    FrontLeft.spin(forward,  (forwardVal + sidewaysVal + turnVal) * .12, voltageUnits::volt);
+    RearRight.spin(forward,  (forwardVal + sidewaysVal - turnVal) * .12, voltageUnits::volt);
+    RearLeft.spin(forward,   (forwardVal - sidewaysVal + turnVal) * .12, voltageUnits::volt);
 
     task::sleep(20);; // Sleep the task for a short amount of time to
                     // prevent wasted resources.
